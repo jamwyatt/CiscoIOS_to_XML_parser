@@ -1,0 +1,1455 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ios>
+<version indent="0" parm0="12.4"/>
+<parser indent="0" parm0="config" parm1="cache" parm2="interface"/>
+<no indent="0" parm0="service" parm1="pad"/>
+<service indent="0" parm0="timestamps" parm1="debug" parm2="datetime" parm3="msec"/>
+<service indent="0" parm0="timestamps" parm1="log" parm2="datetime" parm3="msec"/>
+<service indent="0" parm0="password-encryption"/>
+<service indent="0" parm0="internal"/>
+<service indent="0" parm0="compress-config"/>
+<comment text=""/>
+<hostname indent="0" parm0="site-16265"/>
+<comment text=""/>
+<boot-start-marker indent="0"/>
+<boot-end-marker indent="0"/>
+<comment text=""/>
+<logging indent="0" parm0="message-counter" parm1="syslog"/>
+<enable indent="0" parm0="secret" parm1="5" parm2="$1$41V.$01iVZV.2CZpQ5EAyPxkc91"/>
+<comment text=""/>
+<aaa indent="0" parm0="new-model"/>
+<comment text=""/>
+<comment text=""/>
+<aaa indent="0" parm0="authentication" parm1="login" parm2="default" parm3="local"/>
+<aaa indent="0" parm0="authentication" parm1="login" parm2="sdm_vpn_xauth_ml_1" parm3="local"/>
+<aaa indent="0" parm0="authentication" parm1="login" parm2="RAVPN" parm3="local"/>
+<aaa indent="0" parm0="authorization" parm1="exec" parm2="default" parm3="local"/>
+<aaa indent="0" parm0="authorization" parm1="network" parm2="sdm_vpn_group_ml_1" parm3="local"/>
+<aaa indent="0" parm0="authorization" parm1="network" parm2="EZVPN_GROUP_1" parm3="local"/>
+<comment text=""/>
+<comment text=""/>
+<aaa indent="0" parm0="session-id" parm1="common"/>
+<clock indent="0" parm0="timezone" parm1="CST" parm2="-6"/>
+<clock indent="0" parm0="summer-time" parm1="CDT" parm2="recurring"/>
+<comment text=""/>
+<crypto indent="0" parm0="pki" parm1="trustpoint" parm2="*.jammer.node-1.com">
+	<enrollment indent="1" parm0="terminal" parm1="pem"/>
+	<revocation-check indent="1" parm0="none"/>
+</crypto>
+<comment text=""/>
+<crypto indent="0" parm0="pki" parm1="trustpoint" parm2="TP-self-signed-164586252">
+	<enrollment indent="1" parm0="selfsigned"/>
+	<subject-name indent="1" parm0="cn=IOS-Self-Signed-Certificate-164586252"/>
+	<revocation-check indent="1" parm0="none"/>
+	<rsakeypair indent="1" parm0="TP-self-signed-164586252"/>
+</crypto>
+<comment text=""/>
+<comment text=""/>
+<crypto indent="0" parm0="pki" parm1="certificate" parm2="chain" parm3="*.jammer.node-1.com">
+	<certificate indent="1" parm0="ca" parm1="4846FA70"/>
+</crypto>
+<crypto indent="0" parm0="pki" parm1="certificate" parm2="chain" parm3="TP-self-signed-164586252">
+	<certificate indent="1" parm0="self-signed" parm1="01"/>
+</crypto>
+<dot11 indent="0" parm0="syslog"/>
+<ip indent="0" parm0="source-route"/>
+<ip indent="0" parm0="cef"/>
+<comment text=""/>
+<comment text=""/>
+<ip indent="0" parm0="dhcp" parm1="relay" parm2="information" parm3="trust-all"/>
+<ip indent="0" parm0="dhcp" parm1="excluded-address" parm2="10.1.1.1"/>
+<ip indent="0" parm0="dhcp" parm1="excluded-address" parm2="10.1.1.1" parm3="10.1.1.10"/>
+<ip indent="0" parm0="dhcp" parm1="excluded-address" parm2="192.168.10.1"/>
+<ip indent="0" parm0="dhcp" parm1="excluded-address" parm2="192.168.10.1" parm3="192.168.10.10"/>
+<comment text=""/>
+<ip indent="0" parm0="dhcp" parm1="pool" parm2="phone">
+			<import indent="3" parm0="all"/>
+			<network indent="3" parm0="10.1.1.0" parm1="255.255.255.0"/>
+			<default-router indent="3" parm0="10.1.1.1"/>
+			<option indent="3" parm0="150" parm1="ip" parm2="10.1.1.1"/>
+</ip>
+<comment text=""/>
+<ip indent="0" parm0="dhcp" parm1="pool" parm2="data">
+			<import indent="3" parm0="all"/>
+			<network indent="3" parm0="192.168.10.0" parm1="255.255.255.0"/>
+			<default-router indent="3" parm0="192.168.10.1"/>
+</ip>
+<comment text=""/>
+<ip indent="0" parm0="dhcp" parm1="pool" parm2="data_stat_0">
+			<host indent="3" parm0="192.168.10.200" parm1="255.255.255.0"/>
+			<client-identifier indent="3" parm0="0112.1212.1212.12"/>
+</ip>
+<comment text=""/>
+<ip indent="0" parm0="dhcp" parm1="pool" parm2="data_stat_1">
+			<host indent="3" parm0="192.168.10.201" parm1="255.255.255.0"/>
+			<client-identifier indent="3" parm0="0068.656c.6c6f"/>
+</ip>
+<comment text=""/>
+<comment text=""/>
+<ip indent="0" parm0="domain" parm1="name" parm2="jammer.node-1.com"/>
+<ip indent="0" parm0="name-server" parm1="12.46.104.2"/>
+<ip indent="0" parm0="name-server" parm1="12.46.104.3"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="cuseeme"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="dns"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="ftp"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="h323"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="https"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="icmp"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="imap"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="pop3"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="netshow"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="rcmd"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="realaudio"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="rtsp"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="esmtp"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="sqlnet"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="streamworks"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="tftp"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="tcp" parm4="router-traffic"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="udp" parm4="router-traffic" parm5="timeout" parm6="300"/>
+<ip indent="0" parm0="inspect" parm1="name" parm2="SDM_LOW" parm3="vdolive"/>
+<ip indent="0" parm0="ddns" parm1="update" parm2="method" parm3="sn">
+	<HTTP indent="1">
+		<add indent="2" parm0="https://12.46.104.33/ddns/ddns.html/hostname=&lt;h&gt;/secret=9tCJ6w1ZOY/ifip=&lt;a&gt;"/>
+	</HTTP>
+	<interval indent="1" parm0="maximum" parm1="1" parm2="0" parm3="0" parm4="0"/>
+	<interval indent="1" parm0="minimum" parm1="1" parm2="0" parm3="0" parm4="0"/>
+</ip>
+<comment text=""/>
+<comment text=""/>
+<no indent="0" parm0="ipv6" parm1="cef"/>
+<comment text=""/>
+<multilink indent="0" parm0="bundle-name" parm1="authenticated"/>
+<comment text=""/>
+<comment text=""/>
+<trunk indent="0" parm0="group" parm1="POTS-TRUNK">
+	<hunt-scheme indent="1" parm0="sequential"/>
+</trunk>
+<comment text=""/>
+<comment text=""/>
+<trunk indent="0" parm0="group" parm1="ISDN-TRUNK">
+	<hunt-scheme indent="1" parm0="sequential"/>
+</trunk>
+<comment text=""/>
+<comment text=""/>
+<voice indent="0" parm0="call" parm1="send-alert"/>
+<voice indent="0" parm0="rtp" parm1="send-recv"/>
+<comment text=""/>
+<voice indent="0" parm0="service" parm1="voip">
+	<allow-connections indent="1" parm0="h323" parm1="to" parm2="h323"/>
+	<allow-connections indent="1" parm0="h323" parm1="to" parm2="sip"/>
+	<allow-connections indent="1" parm0="sip" parm1="to" parm2="h323"/>
+	<allow-connections indent="1" parm0="sip" parm1="to" parm2="sip"/>
+	<supplementary-service indent="1" parm0="h450.12"/>
+	<no indent="1" parm0="supplementary-service" parm1="sip" parm2="moved-temporarily"/>
+	<no indent="1" parm0="supplementary-service" parm1="sip" parm2="refer"/>
+	<fax indent="1" parm0="protocol" parm1="t38" parm2="ls-redundancy" parm3="0" parm4="hs-redundancy" parm5="0" parm6="fallback" parm7="pass-through" parm8="g711ulaw"/>
+	<sip indent="1">
+		<bind indent="2" parm0="control" parm1="source-interface" parm2="Loopback0"/>
+		<rel1xx indent="2" parm0="disable"/>
+		<registrar indent="2" parm0="server" parm1="expires" parm2="max" parm3="3600" parm4="min" parm5="3600">
+			<localhost indent="3" parm0="dns:jammer.node-1.com"/>
+		</registrar>
+	</sip>
+</voice>
+<comment text=""/>
+<comment text=""/>
+<voice indent="0" parm0="class" parm1="codec" parm2="1">
+	<codec indent="1" parm0="preference" parm1="1" parm2="g711ulaw"/>
+	<codec indent="1" parm0="preference" parm1="2" parm2="g711alaw"/>
+	<codec indent="1" parm0="preference" parm1="3" parm2="g729r8"/>
+	<codec indent="1" parm0="preference" parm1="4" parm2="g729br8"/>
+</voice>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="1">
+	<rule indent="1" parm0="1" parm1="/^12144735702$/" parm2="/100/"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="2">
+	<rule indent="1" parm0="1" parm1="/^12144735703$/" parm2="/199/"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="410">
+	<rule indent="1" parm0="1" parm1="/^9\(.*\)/" parm2="/\1/"/>
+	<rule indent="1" parm0="2" parm1="/100/" parm2="/12144735702/"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="411">
+	<rule indent="1" parm0="1" parm1="/^A\(...\)/" parm2="/\1/"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="1111">
+	<rule indent="1" parm0="1" parm1="/.*/" parm2="//"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="1112">
+	<rule indent="1" parm0="1" parm1="/^91/" parm2="/1/"/>
+	<rule indent="1" parm0="2" parm1="/^9011/" parm2="//"/>
+	<rule indent="1" parm0="3" parm1="/^9\([2-9]..[2-9]......\)$/" parm2="/1\1/"/>
+	<rule indent="1" parm0="4" parm1="/^9/" parm2="//"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="1113">
+	<rule indent="1" parm0="1" parm1="/^\+\(.*\)/" parm2="/9\1/"/>
+	<rule indent="1" parm0="2" parm1="//" parm2="/9/"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="1114">
+	<rule indent="1" parm0="1" parm1="/^\+\(.*\)/" parm2="/8\1/"/>
+	<rule indent="1" parm0="2" parm1="//" parm2="/8/"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="1115">
+	<rule indent="1" parm0="1" parm1="/.*/" parm2="/12144735702/"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="1120">
+	<rule indent="1" parm0="1" parm1="/^./" parm2="//"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="2001"/>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="2002">
+	<rule indent="1" parm0="1" parm1="/12144735703$/" parm2="/199/"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-rule" parm1="2222"/>
+<comment text=""/>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="AA_Profile">
+	<translate indent="1" parm0="called" parm1="2001"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="CALLER_ID_TRANSLATION_PROFILE">
+	<translate indent="1" parm0="calling" parm1="1111"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="CallBlocking">
+	<translate indent="1" parm0="called" parm1="2222"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="DID_Called_1">
+	<translate indent="1" parm0="calling" parm1="1113"/>
+	<translate indent="1" parm0="called" parm1="1"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="DID_Called_2">
+	<translate indent="1" parm0="calling" parm1="1113"/>
+	<translate indent="1" parm0="called" parm1="2"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="OUTGOING_TRANSLATION_PROFILE">
+	<translate indent="1" parm0="calling" parm1="1115"/>
+	<translate indent="1" parm0="called" parm1="1112"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="POTS_CALLBACK">
+	<translate indent="1" parm0="calling" parm1="1114"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="PSTN_CallForwarding">
+	<translate indent="1" parm0="redirect-target" parm1="410"/>
+	<translate indent="1" parm0="redirect-called" parm1="410"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="PSTN_Outgoing">
+	<translate indent="1" parm0="calling" parm1="1115"/>
+	<translate indent="1" parm0="called" parm1="1112"/>
+	<translate indent="1" parm0="redirect-target" parm1="410"/>
+	<translate indent="1" parm0="redirect-called" parm1="410"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="STRIP_FIRST_DIGIT">
+	<translate indent="1" parm0="called" parm1="1120"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="VM_Profile">
+	<translate indent="1" parm0="called" parm1="2002"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="VOIP_CALLBACK">
+	<translate indent="1" parm0="calling" parm1="1113"/>
+</voice>
+<comment text=""/>
+<voice indent="0" parm0="translation-profile" parm1="drop_transfer2VM">
+	<translate indent="1" parm0="redirect-called" parm1="411"/>
+</voice>
+<comment text=""/>
+<comment text=""/>
+<voice-card indent="0" parm0="0">
+	<dspfarm indent="1"/>
+	<dsp indent="1" parm0="services" parm1="dspfarm"/>
+</voice-card>
+<comment text=""/>
+<fax indent="0" parm0="interface-type" parm1="fax-mail"/>
+<comment text=""/>
+<comment text=""/>
+<file indent="0" parm0="prompt" parm1="quiet"/>
+<username indent="0" parm0="cisco" parm1="privilege" parm2="15" parm3="secret" parm4="5" parm5="$1$TR/v$SddVOFpEeWaTuJbHRyYmW/"/>
+<username indent="0" parm0="-snaccess-" parm1="privilege" parm2="15" parm3="secret" parm4="5" parm5="$1$B9O6$EqjMtRGj2cJnMfMUz85uM/"/>
+<username indent="0" parm0="jamwyatt" parm1="secret" parm2="5" parm3="$1$j5xy$WII2A84orz8u5gobFHpB31"/>
+<comment text=""/>
+<comment text=""/>
+<crypto indent="0" parm0="isakmp" parm1="policy" parm2="1">
+	<encr indent="1" parm0="aes" parm1="256"/>
+	<authentication indent="1" parm0="pre-share"/>
+	<group indent="1" parm0="2"/>
+</crypto>
+<comment text=""/>
+<crypto indent="0" parm0="isakmp" parm1="policy" parm2="2">
+	<encr indent="1" parm0="3des"/>
+	<authentication indent="1" parm0="pre-share"/>
+	<group indent="1" parm0="2"/>
+</crypto>
+<crypto indent="0" parm0="isakmp" parm1="key" parm2="opp3IEYb3E" parm3="address" parm4="0.0.0.0" parm5="0.0.0.0"/>
+<crypto indent="0" parm0="isakmp" parm1="keepalive" parm2="30" parm3="6" parm4="periodic"/>
+<comment text=""/>
+<crypto indent="0" parm0="isakmp" parm1="client" parm2="configuration" parm3="group" parm4="EZVPN_GROUP_1">
+	<key indent="1" parm0="97CgqW154P"/>
+	<pool indent="1" parm0="RAVPN_POOL"/>
+	<acl indent="1" parm0="151"/>
+</crypto>
+<crypto indent="0" parm0="isakmp" parm1="profile" parm2="RAVPN_CLIENT">
+			<match indent="3" parm0="identity" parm1="group" parm2="EZVPN_GROUP_1"/>
+			<client indent="3" parm0="authentication" parm1="list" parm2="RAVPN"/>
+			<isakmp indent="3" parm0="authorization" parm1="list" parm2="EZVPN_GROUP_1"/>
+			<client indent="3" parm0="configuration" parm1="address" parm2="respond"/>
+</crypto>
+<comment text=""/>
+<comment text=""/>
+<crypto indent="0" parm0="ipsec" parm1="transform-set" parm2="ESP_AES_SHA" parm3="esp-des" parm4="esp-sha-hmac"/>
+<crypto indent="0" parm0="ipsec" parm1="transform-set" parm2="ESP_3DES_SHA" parm3="esp-3des" parm4="esp-sha-hmac"/>
+<comment text=""/>
+<crypto indent="0" parm0="dynamic-map" parm1="DYNMAP" parm2="10">
+	<set indent="1" parm0="transform-set" parm1="ESP_AES_SHA" parm2="ESP_3DES_SHA"/>
+	<set indent="1" parm0="isakmp-profile" parm1="RAVPN_CLIENT"/>
+	<reverse-route indent="1"/>
+</crypto>
+<crypto indent="0" parm0="dynamic-map" parm1="DYNMAP" parm2="20">
+	<qos indent="1" parm0="pre-classify"/>
+</crypto>
+<comment text=""/>
+<comment text=""/>
+<crypto indent="0" parm0="map" parm1="OUTSIDE_MAP" parm2="10" parm3="ipsec-isakmp" parm4="dynamic" parm5="DYNMAP"/>
+<comment text=""/>
+<archive indent="0">
+	<log indent="1" parm0="config">
+		<hidekeys indent="2"/>
+	</log>
+	<path indent="1" parm0="https://12.46.104.33/config/archive/id=6265/p=571777725832/op=save/oob=1/n=startup-config/m=iosdiff/pr=UC500/vid=00:1D:A2:FE:78:E0/b=1"/>
+	<time-period indent="1" parm0="1440"/>
+</archive>
+<comment text=""/>
+<comment text=""/>
+<ip indent="0" parm0="tcp" parm1="window-size" parm2="1048576"/>
+<comment text=""/>
+<class-map indent="0" parm0="match-any" parm1="VoIP">
+	<match indent="1" parm0="ip" parm1="dscp" parm2="ef"/>
+</class-map>
+<class-map indent="0" parm0="match-any" parm1="Signaling">
+	<match indent="1" parm0="ip" parm1="dscp" parm2="cs3"/>
+	<match indent="1" parm0="ip" parm1="dscp" parm2="af31"/>
+</class-map>
+<comment text=""/>
+<comment text=""/>
+<policy-map indent="0" parm0="Bottom_Class">
+	<class indent="1" parm0="VoIP">
+				<priority indent="4" parm0="1080"/>
+	</class>
+	<class indent="1" parm0="Signaling">
+				<bandwidth indent="4" parm0="60"/>
+	</class>
+	<class indent="1" parm0="class-default">
+				<fair-queue indent="4"/>
+	</class>
+</policy-map>
+<policy-map indent="0" parm0="Top_Class">
+	<class indent="1" parm0="class-default">
+				<shape indent="4" parm0="average" parm1="2048000"/>
+		<service-policy indent="2" parm0="Bottom_Class"/>
+	</class>
+</policy-map>
+<comment text=""/>
+<bridge indent="0" parm0="irb"/>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<interface indent="0" parm0="Loopback0">
+	<description indent="1" string="$FW_INSIDE$"/>
+	<ip indent="1" parm0="address" parm1="10.1.10.2" parm2="255.255.255.252"/>
+	<ip indent="1" parm0="access-group" parm1="101" parm2="in"/>
+	<ip indent="1" parm0="nat" parm1="inside"/>
+	<ip indent="1" parm0="virtual-reassembly"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="Loopback89">
+	<description indent="1" string="Required for SN access via ssh 14930 port forward"/>
+	<ip indent="1" parm0="address" parm1="10.89.89.254" parm2="255.255.255.252"/>
+	<ip indent="1" parm0="nat" parm1="inside"/>
+	<ip indent="1" parm0="virtual-reassembly"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="FastEthernet0/0">
+	<description indent="1" string="$ETH-WAN$"/>
+	<no indent="1" parm0="ip" parm1="address"/>
+	<ip indent="1" parm0="virtual-reassembly"/>
+	<duplex indent="1" parm0="auto"/>
+	<speed indent="1" parm0="auto"/>
+	<pppoe indent="1" parm0="enable" parm1="group" parm2="global"/>
+	<pppoe-client indent="1" parm0="dial-pool-number" parm1="1"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="Integrated-Service-Engine0/0">
+	<description indent="1" string="cue is initialized with default IMAP group$FW_INSIDE$"/>
+	<ip indent="1" parm0="unnumbered" parm1="Loopback0"/>
+	<ip indent="1" parm0="access-group" parm1="100" parm2="in"/>
+	<ip indent="1" parm0="nat" parm1="inside"/>
+	<ip indent="1" parm0="virtual-reassembly"/>
+	<ip indent="1" parm0="tcp" parm1="adjust-mss" parm2="1412"/>
+	<service-module indent="1" parm0="ip" parm1="address" parm2="10.1.10.1" parm3="255.255.255.252"/>
+	<service-module indent="1" parm0="ip" parm1="default-gateway" parm2="10.1.10.2"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="FastEthernet0/1/0">
+	<switchport indent="1" parm0="voice" parm1="vlan" parm2="100"/>
+	<macro indent="1" parm0="description" parm1="cisco-phone"/>
+	<spanning-tree indent="1" parm0="portfast"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="FastEthernet0/1/1">
+	<switchport indent="1" parm0="voice" parm1="vlan" parm2="100"/>
+	<macro indent="1" parm0="description" parm1="cisco-phone"/>
+	<spanning-tree indent="1" parm0="portfast"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="FastEthernet0/1/2">
+	<switchport indent="1" parm0="voice" parm1="vlan" parm2="100"/>
+	<macro indent="1" parm0="description" parm1="cisco-phone"/>
+	<spanning-tree indent="1" parm0="portfast"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="FastEthernet0/1/3">
+	<switchport indent="1" parm0="voice" parm1="vlan" parm2="100"/>
+	<macro indent="1" parm0="description" parm1="cisco-phone"/>
+	<spanning-tree indent="1" parm0="portfast"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="FastEthernet0/1/4">
+	<switchport indent="1" parm0="voice" parm1="vlan" parm2="100"/>
+	<macro indent="1" parm0="description" parm1="cisco-phone"/>
+	<spanning-tree indent="1" parm0="portfast"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="FastEthernet0/1/5">
+	<switchport indent="1" parm0="voice" parm1="vlan" parm2="100"/>
+	<macro indent="1" parm0="description" parm1="cisco-phone"/>
+	<spanning-tree indent="1" parm0="portfast"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="FastEthernet0/1/6">
+	<switchport indent="1" parm0="voice" parm1="vlan" parm2="100"/>
+	<macro indent="1" parm0="description" parm1="cisco-phone"/>
+	<spanning-tree indent="1" parm0="portfast"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="FastEthernet0/1/7">
+	<switchport indent="1" parm0="voice" parm1="vlan" parm2="100"/>
+	<macro indent="1" parm0="description" parm1="cisco-phone"/>
+	<spanning-tree indent="1" parm0="portfast"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="FastEthernet0/1/8">
+	<switchport indent="1" parm0="mode" parm1="trunk"/>
+	<macro indent="1" parm0="description" parm1="cisco-switch"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="Dot11Radio0/5/0">
+	<no indent="1" parm0="ip" parm1="address"/>
+	<shutdown indent="1"/>
+	<speed indent="1" parm0="basic-1.0" parm1="basic-2.0" parm2="basic-5.5" parm3="6.0" parm4="9.0" parm5="basic-11.0" parm6="12.0" parm7="18.0" parm8="24.0" parm9="36.0" parm10="48.0" parm11="54.0"/>
+	<station-role indent="1" parm0="root"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="Vlan1">
+	<no indent="1" parm0="ip" parm1="address"/>
+	<bridge-group indent="1" parm0="1"/>
+	<bridge-group indent="1" parm0="1" parm1="spanning-disabled"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="Vlan100">
+	<no indent="1" parm0="ip" parm1="address"/>
+	<bridge-group indent="1" parm0="100"/>
+	<bridge-group indent="1" parm0="100" parm1="spanning-disabled"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="Dialer0">
+	<description indent="1" string="$FW_OUTSIDE$"/>
+	<ip indent="1" parm0="dhcp" parm1="client" parm2="update" parm3="dns"/>
+	<ip indent="1" parm0="ddns" parm1="update" parm2="hostname" parm3="proxy.1.6265.jammer.node-1.com"/>
+	<ip indent="1" parm0="ddns" parm1="update" parm2="sn"/>
+	<ip indent="1" parm0="address" parm1="negotiated"/>
+	<ip indent="1" parm0="access-group" parm1="104" parm2="in"/>
+	<ip indent="1" parm0="mtu" parm1="1452"/>
+	<ip indent="1" parm0="nat" parm1="outside"/>
+	<ip indent="1" parm0="inspect" parm1="SDM_LOW" parm2="out"/>
+	<ip indent="1" parm0="virtual-reassembly"/>
+	<encapsulation indent="1" parm0="ppp"/>
+	<dialer indent="1" parm0="pool" parm1="1"/>
+	<dialer-group indent="1" parm0="1"/>
+	<ppp indent="1" parm0="authentication" parm1="chap" parm2="pap" parm3="callin"/>
+	<ppp indent="1" parm0="chap" parm1="hostname" parm2="flarp"/>
+	<ppp indent="1" parm0="chap" parm1="password" parm2="7" parm3="104805161707"/>
+	<ppp indent="1" parm0="pap" parm1="sent-username" parm2="flarp" parm3="password" parm4="7" parm5="13031B1D191C"/>
+	<ppp indent="1" parm0="ipcp" parm1="dns" parm2="request"/>
+	<crypto indent="1" parm0="map" parm1="OUTSIDE_MAP"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="BVI1">
+	<description indent="1" string="$FW_INSIDE$"/>
+	<ip indent="1" parm0="address" parm1="192.168.10.1" parm2="255.255.255.0"/>
+	<ip indent="1" parm0="access-group" parm1="102" parm2="in"/>
+	<ip indent="1" parm0="nat" parm1="inside"/>
+	<ip indent="1" parm0="virtual-reassembly"/>
+	<ip indent="1" parm0="tcp" parm1="adjust-mss" parm2="1412"/>
+</interface>
+<comment text=""/>
+<interface indent="0" parm0="BVI100">
+	<description indent="1" string="$FW_INSIDE$"/>
+	<ip indent="1" parm0="address" parm1="10.1.1.1" parm2="255.255.255.0"/>
+	<ip indent="1" parm0="access-group" parm1="103" parm2="in"/>
+	<ip indent="1" parm0="nat" parm1="inside"/>
+	<ip indent="1" parm0="virtual-reassembly"/>
+	<ip indent="1" parm0="tcp" parm1="adjust-mss" parm2="1412"/>
+</interface>
+<comment text=""/>
+<ip indent="0" parm0="local" parm1="pool" parm2="RAVPN_POOL" parm3="192.168.10.245" parm4="192.168.10.254"/>
+<ip indent="0" parm0="forward-protocol" parm1="nd"/>
+<ip indent="0" parm0="route" parm1="0.0.0.0" parm2="0.0.0.0" parm3="Dialer0"/>
+<ip indent="0" parm0="route" parm1="10.1.10.1" parm2="255.255.255.255" parm3="Integrated-Service-Engine0/0"/>
+<comment text=""/>
+<ip indent="0" parm0="http" parm1="server"/>
+<ip indent="0" parm0="http" parm1="authentication" parm2="local"/>
+<ip indent="0" parm0="http" parm1="secure-server"/>
+<ip indent="0" parm0="http" parm1="client" parm2="source-interface" parm3="BVI1"/>
+<ip indent="0" parm0="http" parm1="path" parm2="flash:/gui"/>
+<ip indent="0" parm0="nat" parm1="inside" parm2="source" parm3="static" parm4="tcp" parm5="10.89.89.254" parm6="22" parm7="interface" parm8="Dialer0" parm9="14930"/>
+<ip indent="0" parm0="nat" parm1="inside" parm2="source" parm3="static" parm4="udp" parm5="192.168.10.1" parm6="123" parm7="interface" parm8="Dialer0" parm9="123"/>
+<ip indent="0" parm0="nat" parm1="inside" parm2="source" parm3="route-map" parm4="NO_NAT" parm5="interface" parm6="Dialer0" parm7="overload"/>
+<comment text=""/>
+<ip indent="0" parm0="sla" parm1="200">
+	<udp-jitter indent="1" parm0="12.46.104.12" parm1="14931" parm2="codec" parm3="g729a" parm4="codec-numpackets" parm5="100"/>
+	<tag indent="1" parm0="Standard" parm1="SN" parm2="IP-SLA" parm3="probe"/>
+	<frequency indent="1" parm0="300"/>
+	<history indent="1" parm0="hours-of-statistics-kept" parm1="25"/>
+</ip>
+<ip indent="0" parm0="sla" parm1="schedule" parm2="200" parm3="life" parm4="forever" parm5="start-time" parm6="now"/>
+<access-list indent="0" parm0="1" access-list="SDM_ACL Category=2"/>
+<access-list indent="0" parm0="1" parm1="permit" parm2="10.1.1.0" parm3="0.0.0.255"/>
+<access-list indent="0" parm0="1" parm1="permit" parm2="192.168.10.0" parm3="0.0.0.255"/>
+<access-list indent="0" parm0="1" parm1="permit" parm2="10.1.10.0" parm3="0.0.0.3"/>
+<access-list indent="0" parm0="100" access-list="auto generated by SDM firewall configuration"/>
+<access-list indent="0" parm0="100" access-list="SDM_ACL Category=1"/>
+<access-list indent="0" parm0="100" parm1="deny" parm2="ip" parm3="10.1.1.0" parm4="0.0.0.255" parm5="any"/>
+<access-list indent="0" parm0="100" parm1="deny" parm2="ip" parm3="192.168.10.0" parm4="0.0.0.255" parm5="any"/>
+<access-list indent="0" parm0="100" parm1="deny" parm2="ip" parm3="host" parm4="255.255.255.255" parm5="any"/>
+<access-list indent="0" parm0="100" parm1="deny" parm2="ip" parm3="127.0.0.0" parm4="0.255.255.255" parm5="any"/>
+<access-list indent="0" parm0="100" parm1="permit" parm2="ip" parm3="any" parm4="any"/>
+<access-list indent="0" parm0="101" access-list="auto generated by SDM firewall configuration"/>
+<access-list indent="0" parm0="101" access-list="SDM_ACL Category=1"/>
+<access-list indent="0" parm0="101" parm1="permit" parm2="tcp" parm3="10.1.1.0" parm4="0.0.0.255" parm5="eq" parm6="2000" parm7="any"/>
+<access-list indent="0" parm0="101" parm1="permit" parm2="udp" parm3="10.1.1.0" parm4="0.0.0.255" parm5="eq" parm6="2000" parm7="any"/>
+<access-list indent="0" parm0="101" parm1="deny" parm2="ip" parm3="10.1.1.0" parm4="0.0.0.255" parm5="any"/>
+<access-list indent="0" parm0="101" parm1="deny" parm2="ip" parm3="192.168.10.0" parm4="0.0.0.255" parm5="any"/>
+<access-list indent="0" parm0="101" parm1="deny" parm2="ip" parm3="host" parm4="255.255.255.255" parm5="any"/>
+<access-list indent="0" parm0="101" parm1="deny" parm2="ip" parm3="127.0.0.0" parm4="0.255.255.255" parm5="any"/>
+<access-list indent="0" parm0="101" parm1="permit" parm2="ip" parm3="any" parm4="any"/>
+<access-list indent="0" parm0="102" access-list="auto generated by SDM firewall configuration"/>
+<access-list indent="0" parm0="102" access-list="SDM_ACL Category=1"/>
+<access-list indent="0" parm0="102" parm1="deny" parm2="ip" parm3="10.1.10.0" parm4="0.0.0.3" parm5="any"/>
+<access-list indent="0" parm0="102" parm1="deny" parm2="ip" parm3="10.1.1.0" parm4="0.0.0.255" parm5="any"/>
+<access-list indent="0" parm0="102" parm1="deny" parm2="ip" parm3="host" parm4="255.255.255.255" parm5="any"/>
+<access-list indent="0" parm0="102" parm1="deny" parm2="ip" parm3="127.0.0.0" parm4="0.255.255.255" parm5="any"/>
+<access-list indent="0" parm0="102" parm1="permit" parm2="ip" parm3="any" parm4="any"/>
+<access-list indent="0" parm0="103" access-list="auto generated by SDM firewall configuration"/>
+<access-list indent="0" parm0="103" access-list="SDM_ACL Category=1"/>
+<access-list indent="0" parm0="103" parm1="permit" parm2="tcp" parm3="10.1.10.0" parm4="0.0.0.3" parm5="any" parm6="eq" parm7="2000"/>
+<access-list indent="0" parm0="103" parm1="permit" parm2="udp" parm3="10.1.10.0" parm4="0.0.0.3" parm5="any" parm6="eq" parm7="2000"/>
+<access-list indent="0" parm0="103" parm1="deny" parm2="ip" parm3="10.1.10.0" parm4="0.0.0.3" parm5="any"/>
+<access-list indent="0" parm0="103" parm1="deny" parm2="ip" parm3="192.168.10.0" parm4="0.0.0.255" parm5="any"/>
+<access-list indent="0" parm0="103" parm1="deny" parm2="ip" parm3="host" parm4="255.255.255.255" parm5="any"/>
+<access-list indent="0" parm0="103" parm1="deny" parm2="ip" parm3="127.0.0.0" parm4="0.255.255.255" parm5="any"/>
+<access-list indent="0" parm0="103" parm1="permit" parm2="ip" parm3="any" parm4="any"/>
+<access-list indent="0" parm0="104" access-list="auto generated by SDM firewall configuration"/>
+<access-list indent="0" parm0="104" access-list="SDM_ACL Category=1"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="tcp" parm3="any" parm4="any" parm5="eq" parm6="14930"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="udp" parm3="any" parm4="any" parm5="eq" parm6="ntp"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="udp" parm3="any" parm4="any" parm5="eq" parm6="non500-isakmp"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="udp" parm3="any" parm4="any" parm5="eq" parm6="isakmp"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="esp" parm3="any" parm4="any"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="ahp" parm3="any" parm4="any"/>
+<access-list indent="0" parm0="104" parm1="deny" parm2="ip" parm3="10.1.10.0" parm4="0.0.0.3" parm5="any"/>
+<access-list indent="0" parm0="104" parm1="deny" parm2="ip" parm3="10.1.1.0" parm4="0.0.0.255" parm5="any"/>
+<access-list indent="0" parm0="104" parm1="deny" parm2="ip" parm3="192.168.10.0" parm4="0.0.0.255" parm5="any"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="udp" parm3="any" parm4="eq" parm5="bootps" parm6="any" parm7="eq" parm8="bootpc"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="icmp" parm3="any" parm4="any" parm5="echo"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="icmp" parm3="any" parm4="any" parm5="echo-reply"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="icmp" parm3="any" parm4="any" parm5="time-exceeded"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="icmp" parm3="any" parm4="any" parm5="unreachable"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="tcp" parm3="12.46.104.0" parm4="0.0.0.63" parm5="eq" parm6="www" parm7="any"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="tcp" parm3="12.46.104.0" parm4="0.0.0.63" parm5="eq" parm6="443" parm7="any"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="udp" parm3="host" parm4="63.241.220.147" parm5="eq" parm6="5060" parm7="any"/>
+<access-list indent="0" parm0="104" parm1="permit" parm2="udp" parm3="any" parm4="any" parm5="range" parm6="16384" parm7="32767"/>
+<access-list indent="0" parm0="104" parm1="deny" parm2="ip" parm3="10.0.0.0" parm4="0.255.255.255" parm5="any"/>
+<access-list indent="0" parm0="104" parm1="deny" parm2="ip" parm3="172.16.0.0" parm4="0.15.255.255" parm5="any"/>
+<access-list indent="0" parm0="104" parm1="deny" parm2="ip" parm3="192.168.0.0" parm4="0.0.255.255" parm5="any"/>
+<access-list indent="0" parm0="104" parm1="deny" parm2="ip" parm3="127.0.0.0" parm4="0.255.255.255" parm5="any"/>
+<access-list indent="0" parm0="104" parm1="deny" parm2="ip" parm3="host" parm4="255.255.255.255" parm5="any"/>
+<access-list indent="0" parm0="150" access-list="VPN NAT Overload"/>
+<access-list indent="0" parm0="150" parm1="deny" parm2="ip" parm3="192.168.10.0" parm4="0.0.0.255" parm5="192.168.10.0" parm6="0.0.0.255"/>
+<access-list indent="0" parm0="150" parm1="deny" parm2="ip" parm3="10.1.10.0" parm4="0.0.0.3" parm5="10.1.10.0" parm6="0.0.0.3"/>
+<access-list indent="0" parm0="150" parm1="deny" parm2="ip" parm3="10.1.1.0" parm4="0.0.0.255" parm5="192.168.10.0" parm6="0.0.0.255"/>
+<access-list indent="0" parm0="150" parm1="permit" parm2="ip" parm3="192.168.10.0" parm4="0.0.0.255" parm5="any"/>
+<access-list indent="0" parm0="150" parm1="permit" parm2="ip" parm3="10.1.1.0" parm4="0.0.0.255" parm5="any"/>
+<access-list indent="0" parm0="150" parm1="permit" parm2="ip" parm3="10.1.10.0" parm4="0.0.0.3" parm5="any"/>
+<access-list indent="0" parm0="151" access-list="RA VPN Traffic"/>
+<access-list indent="0" parm0="151" parm1="permit" parm2="ip" parm3="192.168.10.0" parm4="0.0.0.255" parm5="any"/>
+<access-list indent="0" parm0="151" parm1="permit" parm2="ip" parm3="10.1.1.0" parm4="0.0.0.255" parm5="any"/>
+<snmp-server indent="0" parm0="community" parm1="public" parm2="RO"/>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<route-map indent="0" parm0="NO_NAT" parm1="permit" parm2="1">
+	<match indent="1" parm0="ip" parm1="address" parm2="150"/>
+</route-map>
+<comment text=""/>
+<route-map indent="0" parm0="VPN_NONAT" parm1="permit" parm2="1">
+	<match indent="1" parm0="ip" parm1="address" parm2="150"/>
+</route-map>
+<comment text=""/>
+<comment text=""/>
+<tftp-server indent="0" parm0="flash:CP7902080002SCCP060817A.sbin"/>
+<tftp-server indent="0" parm0="flash:P00308000500.bin"/>
+<tftp-server indent="0" parm0="flash:P00308000500.loads"/>
+<tftp-server indent="0" parm0="flash:P00308000500.sb2"/>
+<tftp-server indent="0" parm0="flash:P00308000500.sbn"/>
+<tftp-server indent="0" parm0="flash:APPS-1.2.1.SBN"/>
+<tftp-server indent="0" parm0="flash:GUI-1.2.1.SBN"/>
+<tftp-server indent="0" parm0="flash:CP7921G-1.2.1.LOADS"/>
+<tftp-server indent="0" parm0="flash:SYS-1.2.1.SBN"/>
+<tftp-server indent="0" parm0="flash:TNUX-1.2.1.SBN"/>
+<tftp-server indent="0" parm0="flash:TNUXR-1.2.1.SBN"/>
+<tftp-server indent="0" parm0="flash:WLAN-1.2.1.SBN"/>
+<tftp-server indent="0" parm0="flash:apps11.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cnu11.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cvm11sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:dsp11.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:jar11sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:term06.default.loads"/>
+<tftp-server indent="0" parm0="flash:term11.default.loads"/>
+<tftp-server indent="0" parm0="flash:S00105000300.sbn"/>
+<tftp-server indent="0" parm0="flash:apps31.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cnu31.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cvm31sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:dsp31.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:jar31sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:SCCP31.8-3-5S.loads"/>
+<tftp-server indent="0" parm0="flash:term31.default.loads"/>
+<tftp-server indent="0" parm0="flash:cmterm_7936.3-3-15-0.bin"/>
+<tftp-server indent="0" parm0="flash:apps41.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cnu41.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cvm41sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:dsp41.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:jar41sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:term41.default.loads"/>
+<tftp-server indent="0" parm0="flash:apps42.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cnu42.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cvm42sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:dsp42.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:jar42sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:SCCP42.8-3-5S.loads"/>
+<tftp-server indent="0" parm0="flash:term42.default.loads"/>
+<tftp-server indent="0" parm0="flash:apps45.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cnu45.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cvm45sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:dsp45.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:jar45sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:SCCP45.8-3-5S.loads"/>
+<tftp-server indent="0" parm0="flash:term45.default.loads"/>
+<tftp-server indent="0" parm0="flash:term61.default.loads"/>
+<tftp-server indent="0" parm0="flash:term62.default.loads"/>
+<tftp-server indent="0" parm0="flash:term65.default.loads"/>
+<tftp-server indent="0" parm0="flash:apps70.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cnu70.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cvm70sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:dsp70.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:jar70sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:SCCP70.8-3-5S.loads"/>
+<tftp-server indent="0" parm0="flash:term71.default.loads"/>
+<tftp-server indent="0" parm0="flash:apps75.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cnu75.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:cvm75sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:dsp75.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:jar75sccp.8-3-4-16.sbn"/>
+<tftp-server indent="0" parm0="flash:SCCP75.8-3-5S.loads"/>
+<tftp-server indent="0" parm0="flash:term75.default.loads"/>
+<tftp-server indent="0" parm0="flash:SCCP11.8-3-5S.loads"/>
+<tftp-server indent="0" parm0="flash:cp524g-08-01-13.bin"/>
+<tftp-server indent="0" parm0="flash:spa525g-7-1-7.bin"/>
+<tftp-server indent="0" parm0="flash:B015-1-0-3-12.SBN"/>
+<tftp-server indent="0" parm0="flash:B015-1-0-3-24.SBN"/>
+<tftp-server indent="0" parm0="flash:B016-1-0-3-12.SBN"/>
+<tftp-server indent="0" parm0="flash:B016-1-0-3-24.SBN"/>
+<tftp-server indent="0" parm0="flash:/7921-dictionary.xml" parm1="alias" parm2="English_United_States/7921-dictionary.xml"/>
+<tftp-server indent="0" parm0="flash:/7921-font.dat" parm1="alias" parm2="English_United_States/7921-font.dat"/>
+<tftp-server indent="0" parm0="flash:/7921-kate.utf-8.xml" parm1="alias" parm2="English_United_States/7921-kate.utf-8.xml"/>
+<tftp-server indent="0" parm0="flash:/7921-kate.xml" parm1="alias" parm2="English_United_States/7921-kate.xml"/>
+<tftp-server indent="0" parm0="flash:/gp-sccp.jar" parm1="alias" parm2="English_United_States/gp-sccp.jar"/>
+<tftp-server indent="0" parm0="flash:/ipc-sccp.jar" parm1="alias" parm2="English_United_States/ipc-sccp.jar"/>
+<tftp-server indent="0" parm0="flash:/mk-sccp.jar" parm1="alias" parm2="English_United_States/mk-sccp.jar"/>
+<tftp-server indent="0" parm0="flash:/tc-sccp.jar" parm1="alias" parm2="English_United_States/tc-sccp.jar"/>
+<tftp-server indent="0" parm0="flash:/td-sccp.jar" parm1="alias" parm2="English_United_States/td-sccp.jar"/>
+<tftp-server indent="0" parm0="flash:/g3-tones.xml" parm1="alias" parm2="United_States/g3-tones.xml"/>
+<tftp-server indent="0" parm0="flash:ringtones/Analog1.raw" parm1="alias" parm2="Analog1.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Analog2.raw" parm1="alias" parm2="Analog2.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/AreYouThere.raw" parm1="alias" parm2="AreYouThere.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/AreYouThereF.raw" parm1="alias" parm2="AreYouThereF.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Bass.raw" parm1="alias" parm2="Bass.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/CallBack.raw" parm1="alias" parm2="CallBack.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Chime.raw" parm1="alias" parm2="Chime.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Classic1.raw" parm1="alias" parm2="Classic1.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Classic2.raw" parm1="alias" parm2="Classic2.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/ClockShop.raw" parm1="alias" parm2="ClockShop.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Drums1.raw" parm1="alias" parm2="Drums1.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Drums2.raw" parm1="alias" parm2="Drums2.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/FilmScore.raw" parm1="alias" parm2="FilmScore.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/HarpSynth.raw" parm1="alias" parm2="HarpSynth.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Jamaica.raw" parm1="alias" parm2="Jamaica.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/KotoEffect.raw" parm1="alias" parm2="KotoEffect.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/MusicBox.raw" parm1="alias" parm2="MusicBox.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Piano1.raw" parm1="alias" parm2="Piano1.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Piano2.raw" parm1="alias" parm2="Piano2.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Pop.raw" parm1="alias" parm2="Pop.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Pulse1.raw" parm1="alias" parm2="Pulse1.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Ring1.raw" parm1="alias" parm2="Ring1.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Ring2.raw" parm1="alias" parm2="Ring2.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Ring3.raw" parm1="alias" parm2="Ring3.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Ring4.raw" parm1="alias" parm2="Ring4.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Ring5.raw" parm1="alias" parm2="Ring5.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Ring6.raw" parm1="alias" parm2="Ring6.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Ring7.raw" parm1="alias" parm2="Ring7.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Sax1.raw" parm1="alias" parm2="Sax1.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Sax2.raw" parm1="alias" parm2="Sax2.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/Vibe.raw" parm1="alias" parm2="Vibe.raw"/>
+<tftp-server indent="0" parm0="flash:ringtones/RingList.xml" parm1="alias" parm2="ringlist.xml"/>
+<tftp-server indent="0" parm0="flash:ringtones/DistinctiveRingList.xml" parm1="alias" parm2="distinctiveringlist.xml"/>
+<tftp-server indent="0" parm0="flash:Desktops/320x212x16/List.xml"/>
+<tftp-server indent="0" parm0="flash:Desktops/320x212x12/List.xml"/>
+<tftp-server indent="0" parm0="flash:Desktops/320x216x16/List.xml"/>
+<tftp-server indent="0" parm0="flash:/Desktops/TN-CampusNight.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/TN-CiscoFountain.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/TN-CiscoLogo.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/TN-Fountain.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/TN-MorroRock.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/TN-NantucketFlowers.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/TN-Kubrick.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/CampusNight.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/CiscoFountain.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/CiscoLogo.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/Fountain.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/MorroRock.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/NantucketFlowers.png"/>
+<tftp-server indent="0" parm0="flash:/Desktops/Kubrick.png"/>
+<tftp-server indent="0" parm0="flash:/sn/spaWireless.cfg" parm1="alias" parm2="/sn/spaWireless.cfg"/>
+<comment text=""/>
+<control-plane indent="0"/>
+<comment text=""/>
+<bridge indent="0" parm0="1" parm1="route" parm2="ip"/>
+<bridge indent="0" parm0="100" parm1="route" parm2="ip"/>
+<comment text=""/>
+<comment text=""/>
+<voice-port indent="0" parm0="0/0/0">
+	<timeouts indent="1" parm0="ringing" parm1="infinity"/>
+	<station-id indent="1" parm0="name" parm1="FXS" parm2="Port"/>
+	<station-id indent="1" parm0="number" parm1="190"/>
+	<caller-id indent="1" parm0="enable"/>
+</voice-port>
+<comment text=""/>
+<voice-port indent="0" parm0="0/0/1">
+	<timeouts indent="1" parm0="ringing" parm1="infinity"/>
+	<station-id indent="1" parm0="name" parm1="FXS" parm2="Port"/>
+	<station-id indent="1" parm0="number" parm1="191"/>
+	<caller-id indent="1" parm0="enable"/>
+</voice-port>
+<comment text=""/>
+<voice-port indent="0" parm0="0/0/2">
+	<timeouts indent="1" parm0="ringing" parm1="infinity"/>
+	<station-id indent="1" parm0="name" parm1="FXS" parm2="Port"/>
+	<station-id indent="1" parm0="number" parm1="192"/>
+	<caller-id indent="1" parm0="enable"/>
+</voice-port>
+<comment text=""/>
+<voice-port indent="0" parm0="0/0/3">
+	<timeouts indent="1" parm0="ringing" parm1="infinity"/>
+	<station-id indent="1" parm0="name" parm1="FXS" parm2="Port"/>
+	<station-id indent="1" parm0="number" parm1="193"/>
+	<caller-id indent="1" parm0="enable"/>
+</voice-port>
+<comment text=""/>
+<voice-port indent="0" parm0="0/1/0">
+	<trunk-group indent="1" parm0="POTS-TRUNK"/>
+	<timeouts indent="1" parm0="call-disconnect" parm1="3"/>
+	<timeouts indent="1" parm0="wait-release" parm1="3"/>
+	<connection indent="1" parm0="plar" parm1="opx" parm2="100"/>
+	<description indent="1" string="FXO Line attached to number 9728811127"/>
+	<caller-id indent="1" parm0="enable"/>
+</voice-port>
+<comment text=""/>
+<voice-port indent="0" parm0="0/1/1"/>
+<comment text=""/>
+<voice-port indent="0" parm0="0/1/2"/>
+<comment text=""/>
+<voice-port indent="0" parm0="0/1/3"/>
+<comment text=""/>
+<voice-port indent="0" parm0="0/4/0">
+	<auto-cut-through indent="1"/>
+	<signal indent="1" parm0="immediate"/>
+	<input indent="1" parm0="gain" parm1="auto-control" parm2="-15"/>
+	<description indent="1" string="Music On Hold Port"/>
+</voice-port>
+<comment text=""/>
+<sccp indent="0" parm0="local" parm1="Loopback0"/>
+<sccp indent="0" parm0="ccm" parm1="10.1.1.1" parm2="identifier" parm3="1" parm4="version" parm5="4.1"/>
+<sccp indent="0"/>
+<comment text=""/>
+<sccp indent="0" parm0="ccm" parm1="group" parm2="1">
+	<associate indent="1" parm0="ccm" parm1="1" parm2="priority" parm3="1"/>
+	<associate indent="1" parm0="profile" parm1="3" parm2="register" parm3="mtp123412341234"/>
+</sccp>
+<comment text=""/>
+<dial-peer indent="0" parm0="cor" parm1="custom">
+	<name indent="1" parm0="internal"/>
+	<name indent="1" parm0="local"/>
+	<name indent="1" parm0="domestic"/>
+	<name indent="1" parm0="international"/>
+</dial-peer>
+<comment text=""/>
+<comment text=""/>
+<dial-peer indent="0" parm0="cor" parm1="list" parm2="call-internal">
+	<member indent="1" parm0="internal"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="cor" parm1="list" parm2="call-local">
+	<member indent="1" parm0="local"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="cor" parm1="list" parm2="call-domestic">
+	<member indent="1" parm0="domestic"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="cor" parm1="list" parm2="call-international">
+	<member indent="1" parm0="international"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="cor" parm1="list" parm2="user-internal">
+	<member indent="1" parm0="internal"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="cor" parm1="list" parm2="user-local">
+	<member indent="1" parm0="internal"/>
+	<member indent="1" parm0="local"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="cor" parm1="list" parm2="user-domestic">
+	<member indent="1" parm0="internal"/>
+	<member indent="1" parm0="local"/>
+	<member indent="1" parm0="domestic"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="cor" parm1="list" parm2="user-international">
+	<member indent="1" parm0="internal"/>
+	<member indent="1" parm0="local"/>
+	<member indent="1" parm0="domestic"/>
+	<member indent="1" parm0="international"/>
+</dial-peer>
+<comment text=""/>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="9999" parm2="voip">
+	<incoming indent="1" parm0="called-number" parm1="A80[0,1]..."/>
+	<codec indent="1" parm0="g711ulaw"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="200" parm2="pots">
+	<description indent="1" string="** MOH Port **"/>
+	<destination-pattern indent="1" parm0="ABC"/>
+	<port indent="1" parm0="0/4/0"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="2000" parm2="voip">
+	<description indent="1" string="** cue voicemail pilot number **"/>
+	<translation-profile indent="1" parm0="outgoing" parm1="drop_transfer2VM"/>
+	<destination-pattern indent="1" parm0="199"/>
+	<b2bua indent="1"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="ipv4:10.1.10.1"/>
+	<dtmf-relay indent="1" parm0="sip-notify"/>
+	<codec indent="1" parm0="g711ulaw"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="2001" parm2="voip">
+	<description indent="1" string="** cue auto attendant number **"/>
+	<translation-profile indent="1" parm0="outgoing" parm1="PSTN_CallForwarding"/>
+	<destination-pattern indent="1" parm0="198"/>
+	<b2bua indent="1"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="ipv4:10.1.10.1"/>
+	<dtmf-relay indent="1" parm0="sip-notify"/>
+	<codec indent="1" parm0="g711ulaw"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="2002" parm2="voip">
+	<description indent="1" string="** Prompt Management Service on CUE **"/>
+	<destination-pattern indent="1" parm0="189"/>
+	<b2bua indent="1"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="ipv4:10.1.10.1"/>
+	<dtmf-relay indent="1" parm0="sip-notify"/>
+	<codec indent="1" parm0="g711ulaw"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="700" parm2="pots">
+	<description indent="1" string="** FXO - 0/1/0: incoming dial peer matching one or more digits *"/>
+	<translation-profile indent="1" parm0="incoming" parm1="POTS_CALLBACK"/>
+	<incoming indent="1" parm0="called-number" parm1=".%"/>
+	<port indent="1" parm0="0/1/0"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="701" parm2="pots">
+	<description indent="1" string="** FXO - 0/1/1: incoming dial peer matching one or more digits *"/>
+	<translation-profile indent="1" parm0="incoming" parm1="POTS_CALLBACK"/>
+	<incoming indent="1" parm0="called-number" parm1=".%"/>
+	<port indent="1" parm0="0/1/1"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="702" parm2="pots">
+	<description indent="1" string="** FXO - 0/1/2: incoming dial peer matching one or more digits *"/>
+	<translation-profile indent="1" parm0="incoming" parm1="POTS_CALLBACK"/>
+	<incoming indent="1" parm0="called-number" parm1=".%"/>
+	<port indent="1" parm0="0/1/2"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="703" parm2="pots">
+	<description indent="1" string="** FXO - 0/1/3: incoming dial peer matching one or more digits *"/>
+	<translation-profile indent="1" parm0="incoming" parm1="POTS_CALLBACK"/>
+	<incoming indent="1" parm0="called-number" parm1=".%"/>
+	<port indent="1" parm0="0/1/3"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="750" parm2="pots">
+	<trunkgroup indent="1" parm0="POTS-TRUNK"/>
+	<corlist indent="1" parm0="outgoing" parm1="call-local"/>
+	<description indent="1" string="** POTS Trunk dial-peer **"/>
+	<preference indent="1" parm0="5"/>
+	<destination-pattern indent="1" parm0="9[2-9]..[2-9]......"/>
+	<forward-digits indent="1" parm0="10"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="751" parm2="pots">
+	<trunkgroup indent="1" parm0="POTS-TRUNK"/>
+	<corlist indent="1" parm0="outgoing" parm1="call-domestic"/>
+	<description indent="1" string="** POTS Trunk dial-peer **"/>
+	<preference indent="1" parm0="5"/>
+	<destination-pattern indent="1" parm0="91[2-9]..[2-9]......"/>
+	<forward-digits indent="1" parm0="11"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="752" parm2="pots">
+	<trunkgroup indent="1" parm0="POTS-TRUNK"/>
+	<corlist indent="1" parm0="outgoing" parm1="call-international"/>
+	<description indent="1" string="** POTS Trunk dial-peer **"/>
+	<preference indent="1" parm0="5"/>
+	<destination-pattern indent="1" parm0="9011T"/>
+	<prefix indent="1" parm0="011"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="753" parm2="pots">
+	<trunkgroup indent="1" parm0="POTS-TRUNK"/>
+	<corlist indent="1" parm0="outgoing" parm1="call-local"/>
+	<description indent="1" string="** POTS Trunk dial-peer **"/>
+	<preference indent="1" parm0="5"/>
+	<destination-pattern indent="1" parm0="9[2-9]11"/>
+	<forward-digits indent="1" parm0="3"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="754" parm2="pots">
+	<trunkgroup indent="1" parm0="POTS-TRUNK"/>
+	<corlist indent="1" parm0="outgoing" parm1="call-local"/>
+	<description indent="1" string="** POTS Trunk dial-peer **"/>
+	<preference indent="1" parm0="5"/>
+	<destination-pattern indent="1" parm0="8[2-9]..[2-9]......"/>
+	<forward-digits indent="1" parm0="10"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="755" parm2="pots">
+	<trunkgroup indent="1" parm0="POTS-TRUNK"/>
+	<corlist indent="1" parm0="outgoing" parm1="call-domestic"/>
+	<description indent="1" string="** POTS Trunk dial-peer **"/>
+	<preference indent="1" parm0="5"/>
+	<destination-pattern indent="1" parm0="81[2-9]..[2-9]......"/>
+	<forward-digits indent="1" parm0="11"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="756" parm2="pots">
+	<trunkgroup indent="1" parm0="POTS-TRUNK"/>
+	<corlist indent="1" parm0="outgoing" parm1="call-international"/>
+	<description indent="1" string="** POTS Trunk dial-peer **"/>
+	<preference indent="1" parm0="5"/>
+	<destination-pattern indent="1" parm0="8011T"/>
+	<prefix indent="1" parm0="011"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="757" parm2="pots">
+	<trunkgroup indent="1" parm0="POTS-TRUNK"/>
+	<corlist indent="1" parm0="outgoing" parm1="call-local"/>
+	<description indent="1" string="** POTS Trunk dial-peer **"/>
+	<preference indent="1" parm0="5"/>
+	<destination-pattern indent="1" parm0="8[2-9]11"/>
+	<forward-digits indent="1" parm0="3"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="2500" parm2="voip">
+	<permission indent="1" parm0="term"/>
+	<description indent="1" string="** Incoming call from SIP trunk **"/>
+	<translation-profile indent="1" parm0="incoming" parm1="VOIP_CALLBACK"/>
+	<voice-class indent="1" parm0="codec" parm1="1"/>
+	<voice-class indent="1" parm0="sip" parm1="dtmf-relay" parm2="force" parm3="rtp-nte"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="sip-server"/>
+	<incoming indent="1" parm0="called-number" parm1=".%"/>
+	<dtmf-relay indent="1" parm0="rtp-nte"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs5" parm3="media"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs4" parm3="signaling"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="2501" parm2="voip">
+	<corlist indent="1" parm0="outgoing" parm1="call-domestic"/>
+	<description indent="1" string="** Outgoing call to SIP trunk **"/>
+	<translation-profile indent="1" parm0="outgoing" parm1="PSTN_Outgoing"/>
+	<destination-pattern indent="1" parm0="91[2-9]..[2-9]......"/>
+	<voice-class indent="1" parm0="codec" parm1="1"/>
+	<voice-class indent="1" parm0="sip" parm1="dtmf-relay" parm2="force" parm3="rtp-nte"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="sip-server"/>
+	<dtmf-relay indent="1" parm0="rtp-nte"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs5" parm3="media"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs4" parm3="signaling"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="2502" parm2="voip">
+	<corlist indent="1" parm0="outgoing" parm1="call-domestic"/>
+	<description indent="1" string="** Outgoing call to SIP trunk **"/>
+	<translation-profile indent="1" parm0="outgoing" parm1="PSTN_Outgoing"/>
+	<destination-pattern indent="1" parm0="9[2-9]..[2-9]......"/>
+	<voice-class indent="1" parm0="codec" parm1="1"/>
+	<voice-class indent="1" parm0="sip" parm1="dtmf-relay" parm2="force" parm3="rtp-nte"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="sip-server"/>
+	<dtmf-relay indent="1" parm0="rtp-nte"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs5" parm3="media"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs4" parm3="signaling"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="2503" parm2="voip">
+	<corlist indent="1" parm0="outgoing" parm1="call-international"/>
+	<description indent="1" string="** Outgoing call to SIP trunk **"/>
+	<translation-profile indent="1" parm0="outgoing" parm1="PSTN_Outgoing"/>
+	<destination-pattern indent="1" parm0="9011T"/>
+	<voice-class indent="1" parm0="codec" parm1="1"/>
+	<voice-class indent="1" parm0="sip" parm1="dtmf-relay" parm2="force" parm3="rtp-nte"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="sip-server"/>
+	<dtmf-relay indent="1" parm0="rtp-nte"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs5" parm3="media"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs4" parm3="signaling"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="2504" parm2="voip">
+	<corlist indent="1" parm0="outgoing" parm1="call-local"/>
+	<description indent="1" string="** 911/411 call to SIP trunk **"/>
+	<translation-profile indent="1" parm0="outgoing" parm1="PSTN_Outgoing"/>
+	<destination-pattern indent="1" parm0="9[2-9]11"/>
+	<voice-class indent="1" parm0="codec" parm1="1"/>
+	<voice-class indent="1" parm0="sip" parm1="dtmf-relay" parm2="force" parm3="rtp-nte"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="sip-server"/>
+	<dtmf-relay indent="1" parm0="rtp-nte"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs5" parm3="media"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs4" parm3="signaling"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="2505" parm2="voip">
+	<description indent="1" string="** Emergency outgoing call to SIP trunk **"/>
+	<translation-profile indent="1" parm0="outgoing" parm1="OUTGOING_TRANSLATION_PROFILE"/>
+	<destination-pattern indent="1" parm0="9911"/>
+	<voice-class indent="1" parm0="codec" parm1="1"/>
+	<voice-class indent="1" parm0="sip" parm1="dtmf-relay" parm2="force" parm3="rtp-nte"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="sip-server"/>
+	<dtmf-relay indent="1" parm0="rtp-nte"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs5" parm3="media"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs4" parm3="signaling"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="2506" parm2="voip">
+	<corlist indent="1" parm0="outgoing" parm1="call-local"/>
+	<description indent="1" string="** star code to SIP trunk **"/>
+	<destination-pattern indent="1" parm0="*.."/>
+	<voice-class indent="1" parm0="codec" parm1="1"/>
+	<voice-class indent="1" parm0="sip" parm1="dtmf-relay" parm2="force" parm3="rtp-nte"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="sip-server"/>
+	<dtmf-relay indent="1" parm0="rtp-nte"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs5" parm3="media"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs4" parm3="signaling"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="1" parm2="pots">
+	<description indent="1" string="FXS Port outbound to port "/>
+	<destination-pattern indent="1" parm0="190"/>
+	<port indent="1" parm0="0/0/0"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="2" parm2="pots">
+	<description indent="1" string="FXS Port outbound to port "/>
+	<destination-pattern indent="1" parm0="191"/>
+	<port indent="1" parm0="0/0/1"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="3" parm2="pots">
+	<description indent="1" string="FXS Port outbound to port "/>
+	<destination-pattern indent="1" parm0="192"/>
+	<port indent="1" parm0="0/0/2"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="4" parm2="pots">
+	<description indent="1" string="FXS Port outbound to port "/>
+	<destination-pattern indent="1" parm0="193"/>
+	<port indent="1" parm0="0/0/3"/>
+	<no indent="1" parm0="sip-register"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="3000" parm2="voip">
+	<description indent="1" string="DID SIP-12144735702-1"/>
+	<translation-profile indent="1" parm0="incoming" parm1="DID_Called_1"/>
+	<voice-class indent="1" parm0="codec" parm1="1"/>
+	<voice-class indent="1" parm0="sip" parm1="dtmf-relay" parm2="force" parm3="rtp-nte"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="sip-server"/>
+	<incoming indent="1" parm0="called-number" parm1="12144735702"/>
+	<dtmf-relay indent="1" parm0="rtp-nte"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs5" parm3="media"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs4" parm3="signaling"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="3001" parm2="voip">
+	<description indent="1" string="DID SIP-12144735703-2"/>
+	<translation-profile indent="1" parm0="incoming" parm1="DID_Called_2"/>
+	<voice-class indent="1" parm0="codec" parm1="1"/>
+	<voice-class indent="1" parm0="sip" parm1="dtmf-relay" parm2="force" parm3="rtp-nte"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="sip-server"/>
+	<incoming indent="1" parm0="called-number" parm1="12144735703"/>
+	<dtmf-relay indent="1" parm0="rtp-nte"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs5" parm3="media"/>
+	<ip indent="1" parm0="qos" parm1="dscp" parm2="cs4" parm3="signaling"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="5500" parm2="voip">
+	<description indent="1" string="Inbound call leg from other sites"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="sip-server"/>
+	<incoming indent="1" parm0="called-number" parm1="1..$"/>
+	<dtmf-relay indent="1" parm0="sip-notify"/>
+	<codec indent="1" parm0="g711ulaw"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<dial-peer indent="0" parm0="voice" parm1="2100" parm2="voip">
+	<description indent="1" string="Voicemail from VoIP"/>
+	<translation-profile indent="1" parm0="outgoing" parm1="VM_Profile"/>
+	<destination-pattern indent="1" parm0="12144735703$"/>
+	<b2bua indent="1"/>
+	<session indent="1" parm0="protocol" parm1="sipv2"/>
+	<session indent="1" parm0="target" parm1="ipv4:10.1.10.1"/>
+	<dtmf-relay indent="1" parm0="sip-notify"/>
+	<codec indent="1" parm0="g711ulaw"/>
+	<no indent="1" parm0="vad"/>
+</dial-peer>
+<comment text=""/>
+<comment text=""/>
+<sip-ua indent="0">
+	<credentials indent="1" parm0="username" parm1="12144735702" parm2="password" parm3="7" parm4="12090316445D54577978727C" parm5="realm" parm6="sbcs.trialnode.net"/>
+	<authentication indent="1" parm0="username" parm1="12144735702" parm2="password" parm3="7" parm4="12090316445D54577978727C" parm5="realm" parm6="sbcs.trialnode.net"/>
+	<no indent="1" parm0="remote-party-id"/>
+	<retry indent="1" parm0="invite" parm1="2"/>
+	<retry indent="1" parm0="register" parm1="10"/>
+	<timers indent="1" parm0="connect" parm1="100"/>
+	<registrar indent="1" parm0="dns:sbcs.trialnode.net" parm1="expires" parm2="3600"/>
+	<sip-server indent="1" parm0="ipv4:63.241.220.147"/>
+</sip-ua>
+<connection-reuse indent="0">
+		<host-registrar indent="2"/>
+</connection-reuse>
+<comment text=""/>
+<comment text=""/>
+<comment text=""/>
+<telephony-service indent="0">
+	<sdspfarm indent="1" parm0="transcode" parm1="sessions" parm2="8"/>
+	<sdspfarm indent="1" parm0="unregister" parm1="force"/>
+	<video indent="1"/>
+	<load indent="1" parm0="7914" parm1="S00105000300"/>
+	<load indent="1" parm0="7915-12" parm1="B015-1-0-3-12.SBN"/>
+	<load indent="1" parm0="7915-24" parm1="B015-1-0-3-24.SBN"/>
+	<load indent="1" parm0="7916-12" parm1="B016-1-0-3-12.SBN"/>
+	<load indent="1" parm0="7916-24" parm1="B016-1-0-3-24.SBN"/>
+	<load indent="1" parm0="7902" parm1="CP7902080002SCCP060817A"/>
+	<load indent="1" parm0="7906" parm1="SCCP11.8-3-5S.loads"/>
+	<load indent="1" parm0="7911" parm1="SCCP11.8-3-5S.loads"/>
+	<load indent="1" parm0="7921" parm1="CP7921G-1.2.1.LOADS"/>
+	<load indent="1" parm0="7931" parm1="SCCP31.8-3-5S"/>
+	<load indent="1" parm0="7936" parm1="cmterm_7936.3-3-15-0"/>
+	<load indent="1" parm0="7960-7940" parm1="P00308000500"/>
+	<load indent="1" parm0="7941" parm1="P00308000500.loads"/>
+	<load indent="1" parm0="7941GE" parm1="P00308000500.loads"/>
+	<load indent="1" parm0="7942" parm1="SCCP42.8-3-5S"/>
+	<load indent="1" parm0="7945" parm1="SCCP45.8-3-5S"/>
+	<load indent="1" parm0="7961" parm1="P00308000500.loads"/>
+	<load indent="1" parm0="7961GE" parm1="P00308000500.loads"/>
+	<load indent="1" parm0="7962" parm1="SCCP42.8-3-5S.loads"/>
+	<load indent="1" parm0="7965" parm1="SCCP45.8-3-5S.loads"/>
+	<load indent="1" parm0="7970" parm1="SCCP70.8-3-5S"/>
+	<load indent="1" parm0="7971" parm1="SCCP70.8-3-5S.loads"/>
+	<load indent="1" parm0="7975" parm1="SCCP75.8-3-5S"/>
+	<load indent="1" parm0="521G-524G" parm1="cp524g-08-01-13"/>
+	<load indent="1" parm0="525G" parm1="spa525g-7-1-7"/>
+	<max-ephones indent="1" parm0="14"/>
+	<max-dn indent="1" parm0="56"/>
+	<ip indent="1" parm0="source-address" parm1="10.1.1.1" parm2="port" parm3="2000"/>
+	<max-redirect indent="1" parm0="12"/>
+	<calling-number indent="1" parm0="initiator"/>
+	<service indent="1" parm0="phone" parm1="videoCapability" parm2="1"/>
+	<service indent="1" parm0="phone" parm1="ehookEnable" parm2="1"/>
+	<service indent="1" parm0="phone" parm1="displayOnWhenIncomingCall" parm2="1"/>
+	<service indent="1" parm0="dss"/>
+	<system indent="1" parm0="message" parm1="Robert" parm2="Home" parm3="2"/>
+	<url indent="1" parm0="services" parm1="http://10.1.10.1/voiceview/common/login.do"/>
+	<url indent="1" parm0="authentication" parm1="http://10.1.10.1/voiceview/authentication/authenticate.do" parm2=""/>
+	<time-zone indent="1" parm0="8"/>
+	<voicemail indent="1" parm0="199"/>
+	<max-conferences indent="1" parm0="4" parm1="gain" parm2="-6"/>
+	<call-forward indent="1" parm0="pattern" parm1=".T"/>
+	<call-forward indent="1" parm0="system" parm1="redirecting-expanded"/>
+	<moh indent="1" parm0="music-on-hold.au"/>
+	<multicast indent="1" parm0="moh" parm1="239.10.16.16" parm2="port" parm3="2000"/>
+	<web indent="1" parm0="admin" parm1="system" parm2="name" parm3="cisco" parm4="secret" parm5="5" parm6="$1$WmSL$WlUEVtrItdKI.DHq1Kv6J."/>
+	<dn-webedit indent="1"/>
+	<time-webedit indent="1"/>
+	<transfer-system indent="1" parm0="full-consult" parm1="dss"/>
+	<transfer-pattern indent="1" parm0=".T"/>
+	<secondary-dialtone indent="1" parm0="9"/>
+	<xmltest indent="1"/>
+	<create indent="1" parm0="cnf-files" parm1="version-stamp" parm2="Jan" parm3="01" parm4="2002" parm5="00:00:00"/>
+</telephony-service>
+<comment text=""/>
+<comment text=""/>
+<ephone-template indent="0" parm0="1">
+	<softkeys indent="1" parm0="connected" parm1="Hold" parm2="Endcall" parm3="Trnsfer" parm4="Confrn" parm5="Acct" parm6="Flash" parm7="Park"/>
+</ephone-template>
+<comment text=""/>
+<comment text=""/>
+<ephone-template indent="0" parm0="2">
+	<softkeys indent="1" parm0="connected" parm1="Hold" parm2="Endcall" parm3="Trnsfer" parm4="Confrn" parm5="LiveRcd" parm6="Acct" parm7="Flash" parm8="Park"/>
+</ephone-template>
+<comment text=""/>
+<comment text=""/>
+<ephone-dn indent="0" parm0="1">
+	<number indent="1" parm0="BCD" parm1="no-reg" parm2="primary"/>
+	<description indent="1" string="MoH"/>
+	<moh indent="1" parm0="out-call" parm1="ABC"/>
+</ephone-dn>
+<comment text=""/>
+<comment text=""/>
+<ephone-dn indent="0" parm0="2">
+	<number indent="1" parm0="A801..." parm1="no-reg" parm2="primary"/>
+	<mwi indent="1" parm0="off"/>
+</ephone-dn>
+<comment text=""/>
+<comment text=""/>
+<ephone-dn indent="0" parm0="3">
+	<number indent="1" parm0="A800..." parm1="no-reg" parm2="primary"/>
+	<mwi indent="1" parm0="on"/>
+</ephone-dn>
+<comment text=""/>
+<comment text=""/>
+<ephone-dn indent="0" parm0="4">
+	<number indent="1" parm0="A..." parm1="no-reg" parm2="primary"/>
+	<call-forward indent="1" parm0="all" parm1="199"/>
+</ephone-dn>
+<comment text=""/>
+<comment text=""/>
+<ephone-dn indent="0" parm0="5">
+	<number indent="1" parm0="160" parm1="no-reg" parm2="primary"/>
+	<label indent="1" string="Paging Group DN"/>
+	<paging indent="1" parm0="ip" parm1="239.0.1.20" parm2="port" parm3="2000"/>
+</ephone-dn>
+<comment text=""/>
+<comment text=""/>
+<ephone-dn indent="0" parm0="6">
+	<number indent="1" parm0="161" parm1="no-reg" parm2="primary"/>
+	<park-slot indent="1" parm0="timeout" parm1="20" parm2="limit" parm3="3" parm4="recall"/>
+	<label indent="1" string="Call Park Slot"/>
+</ephone-dn>
+<comment text=""/>
+<comment text=""/>
+<ephone-dn indent="0" parm0="7" parm1="octo-line">
+	<number indent="1" parm0="100" parm1="no-reg" parm2="primary"/>
+	<label indent="1" string="Robert Wyatt 100"/>
+	<description indent="1" string="12144735702"/>
+	<name indent="1" parm0="Robert" parm1="Wyatt"/>
+	<call-forward indent="1" parm0="noan" parm1="199" parm2="timeout" parm3="60"/>
+	<corlist indent="1" parm0="incoming" parm1="user-international"/>
+	<huntstop indent="1" parm0="channel" parm1="2"/>
+	<translation-profile indent="1" parm0="incoming" parm1="CallBlocking"/>
+</ephone-dn>
+<comment text=""/>
+<comment text=""/>
+<ephone-dn indent="0" parm0="8" parm1="octo-line">
+	<number indent="1" parm0="101" parm1="no-reg" parm2="primary"/>
+	<label indent="1" string="101"/>
+	<description indent="1" string="101"/>
+	<call-forward indent="1" parm0="busy" parm1="198"/>
+	<call-forward indent="1" parm0="noan" parm1="198" parm2="timeout" parm3="25"/>
+	<corlist indent="1" parm0="incoming" parm1="user-international"/>
+	<translation-profile indent="1" parm0="incoming" parm1="CallBlocking"/>
+</ephone-dn>
+<comment text=""/>
+<comment text=""/>
+<ephone indent="0" parm0="1">
+	<device-security-mode indent="1" parm0="none"/>
+	<video indent="1"/>
+	<mac-address indent="1" parm0="001F.6C7F.30C2"/>
+	<username indent="1" parm0="&quot;jamwyatt&quot;" parm1="password" parm2="123123"/>
+	<speed-dial indent="1" parm0="1" parm1="92143948142" parm2="label" parm3="&quot;Michelle" parm4="Cell&quot;"/>
+	<paging-dn indent="1" parm0="5"/>
+	<type indent="1" parm0="7945"/>
+	<mwi-line indent="1" parm0="1"/>
+	<button indent="1" parm0="1:7" parm1="2s8"/>
+</ephone>
+<comment text=""/>
+<comment text=""/>
+<banner indent="0" type="exec">#
+------------------------------------------------------------
+CAUTION: You have accessed a managed system. Before making
+changes, contact your site administrator.
+Failure to comply could affect sensitive
+voice and data applications.
+------------------------------------------------------------
+#</banner>
+<banner indent="0" type="login">#
+
+------------------------------------------------------------
+
+ATTENTION: Unauthorized access to this system is forbidden
+and will be prosecuted by law. By accessing this system,
+you agree that your actions may be monitored if unauthorized
+usage is suspected.
+
+------------------------------------------------------------
+
+#</banner>
+<alias indent="0" parm0="exec" parm1="sn_info" parm2="task_seq=14609" parm3="config_time=1242104414" parm4="sn_rel=FP-en_US-Beta-4.3.1.065"/>
+<comment text=""/>
+<line indent="0" parm0="con" parm1="0">
+	<no indent="1" parm0="modem" parm1="enable"/>
+</line>
+<line indent="0" parm0="aux" parm1="0"/>
+<line indent="0" parm0="2">
+	<no indent="1" parm0="activation-character"/>
+	<no indent="1" parm0="exec"/>
+	<transport indent="1" parm0="preferred" parm1="none"/>
+	<transport indent="1" parm0="input" parm1="all"/>
+</line>
+<line indent="0" parm0="vty" parm1="0" parm2="4">
+	<login indent="1" parm0="authentication" parm1="sdm_vpn_xauth_ml_1"/>
+</line>
+<line indent="0" parm0="vty" parm1="5" parm2="100">
+	<login indent="1" parm0="authentication" parm1="sdm_vpn_xauth_ml_1"/>
+</line>
+<comment text=""/>
+<exception indent="0" parm0="data-corruption" parm1="buffer" parm2="truncate"/>
+<ntp indent="0" parm0="update-calendar"/>
+<ntp indent="0" parm0="server" parm1="12.46.104.100"/>
+<event indent="0" parm0="manager" parm1="environment" parm2="_discovery_cron_entry" parm3="0" parm4="0" parm5="*" parm6="*" parm7="*"/>
+<event indent="0" parm0="manager" parm1="directory" parm2="user" parm3="policy" parm4="&quot;flash:/sn/eem&quot;"/>
+<event indent="0" parm0="manager" parm1="directory" parm2="user" parm3="library" parm4="&quot;flash:/sn/eem/lib&quot;"/>
+<event indent="0" parm0="manager" parm1="session" parm2="cli" parm3="username" parm4="&quot;cisco&quot;"/>
+<event indent="0" parm0="manager" parm1="applet" parm2="ddns-fixup-1">
+	<event indent="1" parm0="timer" parm1="countdown" parm2="time" parm3="60" parm4="maxrun" parm5="1"/>
+	<action indent="1" parm0="1.0" parm1="cli" action="&quot;enable&quot;"/>
+	<action indent="1" parm0="2.0" parm1="cli" action="&quot;copy https://12.46.104.33/ddns/ddns.html/hostname=proxy.1.6265.jammer.node-1.com/secret=9tCJ6w1ZOY/eem=1 null:&quot;"/>
+</event>
+<event indent="0" parm0="manager" parm1="applet" parm2="ddns-fixup-5">
+	<event indent="1" parm0="timer" parm1="countdown" parm2="time" parm3="300" parm4="maxrun" parm5="1"/>
+	<action indent="1" parm0="1.0" parm1="cli" action="&quot;enable&quot;"/>
+	<action indent="1" parm0="2.0" parm1="cli" action="&quot;copy https://12.46.104.33/ddns/ddns.html/hostname=proxy.1.6265.jammer.node-1.com/secret=9tCJ6w1ZOY/eem=5 null:&quot;"/>
+</event>
+<event indent="0" parm0="manager" parm1="applet" parm2="ddns-fixup-10">
+	<event indent="1" parm0="timer" parm1="countdown" parm2="time" parm3="600" parm4="maxrun" parm5="1"/>
+	<action indent="1" parm0="1.0" parm1="cli" action="&quot;enable&quot;"/>
+	<action indent="1" parm0="2.0" parm1="cli" action="&quot;copy https://12.46.104.33/ddns/ddns.html/hostname=proxy.1.6265.jammer.node-1.com/secret=9tCJ6w1ZOY/eem=10 null:&quot;"/>
+</event>
+<event indent="0" parm0="manager" parm1="applet" parm2="ddns-fixup-30">
+	<event indent="1" parm0="timer" parm1="countdown" parm2="time" parm3="1800" parm4="maxrun" parm5="1"/>
+	<action indent="1" parm0="1.0" parm1="cli" action="&quot;enable&quot;"/>
+	<action indent="1" parm0="2.0" parm1="cli" action="&quot;copy https://12.46.104.33/ddns/ddns.html/hostname=proxy.1.6265.jammer.node-1.com/secret=9tCJ6w1ZOY/eem=30 null:&quot;"/>
+</event>
+<event indent="0" parm0="manager" parm1="policy" parm2="discovery.tcl" parm3="type" parm4="user"/>
+<comment text=""/>
+</ios>
+
